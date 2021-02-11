@@ -20,3 +20,5 @@ sudo nextflow run brwnj/covviz -latest -profile docker --indexes '/data/iget/tes
 # scp -r -i ~/theta.key ubuntu@172.27.20.23:/home/ubuntu/data/work/08/181a9df60ccb8461e2ec3e2d93d422/ ./
 # mv 181a9df60ccb8461e2ec3e2d93d422/ test-two-genomes
 ## Produces no html - errors in build.
+
+## test with ten 

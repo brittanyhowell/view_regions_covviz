@@ -1,0 +1,36 @@
+[INFO] parsing bed file (NF-indexcov.bed.gz)
+[INFO] plotting 2 traces on chrom chr1
+[INFO] plotting 2 traces on chrom chr10
+[INFO] plotting 2 traces on chrom chr11
+[INFO] plotting 2 traces on chrom chr12
+[INFO] plotting 2 traces on chrom chr13
+[INFO] plotting 2 traces on chrom chr14
+[INFO] plotting 2 traces on chrom chr15
+[INFO] plotting 2 traces on chrom chr16
+[INFO] plotting 2 traces on chrom chr17
+[INFO] plotting 2 traces on chrom chr18
+[INFO] plotting 0 traces on chrom chr2
+[INFO] plotting 0 traces on chrom chr20
+[INFO] plotting 0 traces on chrom chr21
+[INFO] plotting 2 traces on chrom chr22
+[INFO] plotting 0 traces on chrom chr3
+[INFO] plotting 0 traces on chrom chr4
+[INFO] plotting 2 traces on chrom chr5
+[INFO] plotting 2 traces on chrom chr6
+[INFO] plotting 0 traces on chrom chr7
+[INFO] plotting 0 traces on chrom chr8
+[INFO] plotting 0 traces on chrom chr9
+[INFO] plotting 0 traces on chrom chrX
+[INFO] plotting 2 traces on chrom chrY
+Traceback (most recent call last):
+  File "/opt/conda/envs/env/bin/covviz", line 10, in <module>
+    sys.exit(cli())
+  File "/opt/conda/envs/env/lib/python3.7/site-packages/covviz/covviz.py", line 214, in cli
+    traces = optimize_coords(traces)
+  File "/opt/conda/envs/env/lib/python3.7/site-packages/covviz/utils.py", line 43, in optimize_coords
+    data["shared_coords"] = find_common_start(coords)
+  File "/opt/conda/envs/env/lib/python3.7/site-packages/covviz/utils.py", line 30, in find_common_start
+    res = compare_array(res, np.array(items[i]))
+  File "/opt/conda/envs/env/lib/python3.7/site-packages/covviz/utils.py", line 20, in compare_array
+    return a[: np.nonzero(a != b)[0][0]]
+IndexError: index 0 is out of bounds for axis 0 with size 0

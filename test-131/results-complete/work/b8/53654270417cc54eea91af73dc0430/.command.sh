@@ -1,0 +1,3 @@
+#!/bin/bash -euo pipefail
+goleft indexcov --sex X,Y --excludepatt "^GL|^hs|EBV$|M$|MT$|^NC|_random$|Un_|^HLA\-|_alt$|hap\d+$" --directory NF --fai hg38.fa.fai 19540644.HXV2.paired308.c7a5bd8bc6.cram.crai 15253233.HXV2.paired308.a6047f47eb.cram.crai 19635806.HXV2.paired308.db40240a8c.cram.crai 15253278.HXV2.paired308.2caff4e3cd.cram.crai 19637582.HXV2.paired308.0172deaa5a.cram.crai 18939364.HXV2.paired308.80922b51f5.cram.crai 14956284.HXV2.paired308.d7c076a5b2.cram.crai 19540613.HXV2.paired308.3a7627e6a3.cram.crai 15253254.HXV2.paired308.38aa70d346.cram.crai 15253242.HXV2.paired308.d58bce2e9e.cram.crai 15778186.HXV2.paired308.e0dcf99eae.cram.crai
+mv NF/* .

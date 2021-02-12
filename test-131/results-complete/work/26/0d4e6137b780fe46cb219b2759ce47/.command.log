@@ -1,0 +1,34 @@
+WARNING: Your kernel does not support swap limit capabilities or the cgroup is not mounted. Memory limited without swap.
+2021/02/11 16:03:52 crai: negative alnSpan in line 48139: 491	1	-2147483648	19982877754	671	645581
+. breaking early.
+2021/02/11 16:03:52 crai: negative alnSpan in line 41240: 563	1	-2147483648	18558725028	1567	704029
+. breaking early.
+2021/02/11 16:03:52 crai: negative alnSpan in line 37273: 496	1	-2147483648	19039630365	409	628837
+. breaking early.
+2021/02/11 16:03:52 crai: negative alnSpan in line 47446: 1035	1	-2147483648	19672910228	956	579060
+. breaking early.
+2021/02/11 16:03:52 crai: negative alnSpan in line 39748: 1374	1	-2147483648	16790544650	1265	770612
+. breaking early.
+2021/02/11 16:03:52 crai: negative alnSpan in line 47078: 621	1	-2147483648	20803899131	926	716788
+. breaking early.
+2021/02/11 16:03:53 crai: negative alnSpan in line 50790: 796	1	-2147483648	21167061538	1234	613878
+. breaking early.
+2021/02/11 16:03:53 crai: negative alnSpan in line 43937: 1724	1	-2147483648	18410020791	1296	797230
+. breaking early.
+2021/02/11 16:03:53 crai: negative alnSpan in line 51209: 1425	1	-2147483648	20277990819	1505	705818
+. breaking early.
+2021/02/11 16:03:53 crai: negative alnSpan in line 43279: 2018	1	-2147483648	20525632444	1617	1122722
+. breaking early.
+2021/02/11 16:03:53 indexcov: running on 10 indexes
+2021/02/11 16:03:55 indexcv: excluding chromosome: chr11_KI270721v1_random because of exclude-pattern: ^GL|^hs|EBV$|M$|MT$|^NC|_random$|Un_|^HLA\-|_alt$|hap\d+$
+2021/02/11 16:03:55 indexcv: excluding chromosome: chr14_GL000009v2_random because of exclude-pattern: ^GL|^hs|EBV$|M$|MT$|^NC|_random$|Un_|^HLA\-|_alt$|hap\d+$
+2021/02/11 16:03:55 indexcv: excluding chromosome: chr14_GL000225v1_random because of exclude-pattern: ^GL|^hs|EBV$|M$|MT$|^NC|_random$|Un_|^HLA\-|_alt$|hap\d+$
+2021/02/11 16:03:55 indexcv: excluding chromosome: chr14_KI270722v1_random because of exclude-pattern: ^GL|^hs|EBV$|M$|MT$|^NC|_random$|Un_|^HLA\-|_alt$|hap\d+$
+2021/02/11 16:03:55 indexcv: excluding chromosome: chr14_GL000194v1_random because of exclude-pattern: ^GL|^hs|EBV$|M$|MT$|^NC|_random$|Un_|^HLA\-|_alt$|hap\d+$
+2021/02/11 16:03:55 indexcv: excluding chromosome: chr14_KI270723v1_random because of exclude-pattern: ^GL|^hs|EBV$|M$|MT$|^NC|_random$|Un_|^HLA\-|_alt$|hap\d+$
+2021/02/11 16:03:55 indexcv: excluding chromosome: chr14_KI270724v1_random because of exclude-pattern: ^GL|^hs|EBV$|M$|MT$|^NC|_random$|Un_|^HLA\-|_alt$|hap\d+$
+2021/02/11 16:03:55 indexcv: excluding chromosome: chr14_KI270725v1_random because of exclude-pattern: ^GL|^hs|EBV$|M$|MT$|^NC|_random$|Un_|^HLA\-|_alt$|hap\d+$
+2021/02/11 16:03:55 indexcv: excluding chromosome: chr14_KI270726v1_random because of exclude-pattern: ^GL|^hs|EBV$|M$|MT$|^NC|_random$|Un_|^HLA\-|_alt$|hap\d+$
+2021/02/11 16:03:56 indexcv: excluding chromosome: chr15_KI270727v1_random because of exclude-pattern: ^GL|^hs|EBV$|M$|MT$|^NC|_random$|Un_|^HLA\-|_alt$|hap\d+$
+2021/02/11 16:03:56 not reporting further skipped chromosomes
+indexcov finished: see NF/index.html for overview of output

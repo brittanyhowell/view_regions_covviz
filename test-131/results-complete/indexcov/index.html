@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+
+	<title>NF:indexcov</title>
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.js"></script>
+		<style type="text/css">
+section {
+    width: 96%;
+    height: 425px;
+    margin: auto;
+    padding: 8px;
+}
+
+.help {
+	font-family: Lucida Console;
+	font-face: bold;
+	font-size: +2em;
+    padding: 2px;
+	border: 1px solid #aaa
+}
+
+
+.tt {
+	font-family: Lucida Console;
+    border: 2px solid #aaa;
+    padding: 2px;
+	height: auto;
+}
+
+.a3 {
+    width: 32%;
+    height: 380px;
+    float: left;
+    padding: 2px;
+}
+.b3 {
+    width: 32%;
+    margin-left: 32%;
+    height: 380px;
+    padding: 2px;
+}
+.c3 {
+    width: 32%;
+    margin-left: 32%;
+    height: 380px;
+    padding: 2px;
+}
+
+.one {
+    width: 48%;
+    height: 380px;
+    float: left;
+    padding: 2px;
+}
+.two {
+    width: 48%;
+    margin-left: 48%;
+    height: 380px;
+    padding: 2px;
+}
+		</style>
+
+    </head>
+    <body>
+<span class="top-help">
+This is the <a href="https://github.com/brentp/goleft/tree/master/indexcov">indexcov</a> summary page created with version 0.2.3.<br/>
+Click the <span class="help">?</span> above each plot for help describing that type of plot.
+</span>
+
+
+	<section>
+	<table style="width:100%">
+	<tr>
+	<td>
+	<span class="tt">Inferred sex</span> <a class="help" href="https://github.com/brentp/goleft/blob/master/docs/indexcov/help-sex.md" target="_blank">?</a>
+	
+	<canvas id="canvas-sex" style="height:380px;width:380px"></canvas>
+	
+	</td>
+
+	<td>
+	
+	</td>
+
+	<td>
+	<span class="tt">Bin Counts</span> <a class="help" href="https://github.com/brentp/goleft/blob/master/docs/indexcov/help-bin.md" target="_blank">?</a>
+	<canvas id="canvas-bin" style="height:380px;width:380px"></canvas>
+	</td>
+	</tr>
+	</table>
+
+
+	</section>
+	<hr>
+
+
+<section style="height:auto">
+	<div class="one" style="height:auto">
+	<span class="tt">Pedigree File</span>
+	<p>contains inferred sex, bins counts, and PCA values used to make the above plots</p>
+	<a href="NF-indexcov.ped">NF-indexcov.ped</a>
+	</div>
+
+	<div class="two" style="height:auto">
+	<span class="tt">Coverage BED File</span>
+	<p>contains scaled coverage for every sample (each column) for each 16,384 interval in the index</p>
+	<a href="NF-indexcov.bed.gz">NF-indexcov.bed.gz</a>
+	</div>
+
+</section><hr/>
+
+
+
+
+<section style="height:auto">
+	<div class="one">
+	<span class="tt">PCA: 1 vs 2</span>
+	<a class="help" href="https://github.com/brentp/goleft/blob/master/docs/indexcov/help-pca.md" target="_blank">?</a>
+	<canvas id="canvas-pca" style="height:380px;width:380px"></canvas>
+	</div>
+
+	<div class="two">
+	<span class="tt">PCA: 1 vs 3</span>
+	<a class="help" href="https://github.com/brentp/goleft/blob/master/docs/indexcov/help-pca.md" target="_blank">?</a>
+	<canvas id="canvas-pcb" style="height:380px;width:380px"></canvas>
+	</div>
+
+</section><hr/>
+
+
+
+<section style="height:auto">
+
+
+	<div class="one">
+	<span class="tt">Coverage Plots</span> <a class="help" href="https://github.com/brentp/goleft/blob/master/docs/indexcov/help-depth.md#coverage" target="_blank">?</a>
+	<p>Click each plot for an interactive view.</p>
+
+	
+	
+		<p>
+		<a href="NF-indexcov-roc-chr1.html"><img src="NF-indexcov-roc-chr1.png" /></a>
+		</p>
+	
+		<p>
+		<a href="NF-indexcov-roc-chr10.html"><img src="NF-indexcov-roc-chr10.png" /></a>
+		</p>
+	
+		<p>
+		<a href="NF-indexcov-roc-chr11.html"><img src="NF-indexcov-roc-chr11.png" /></a>
+		</p>
+	
+		<p>
+		<a href="NF-indexcov-roc-chr12.html"><img src="NF-indexcov-roc-chr12.png" /></a>
+		</p>
+	
+		<p>
+		<a href="NF-indexcov-roc-chr13.html"><img src="NF-indexcov-roc-chr13.png" /></a>
+		</p>
+	
+		<p>
+		<a href="NF-indexcov-roc-chr14.html"><img src="NF-indexcov-roc-chr14.png" /></a>
+		</p>
+	
+		<p>
+		<a href="NF-indexcov-roc-chr15.html"><img src="NF-indexcov-roc-chr15.png" /></a>
+		</p>
+	
+		<p>
+		<a href="NF-indexcov-roc-chr16.html"><img src="NF-indexcov-roc-chr16.png" /></a>
+		</p>
+	
+		<p>
+		<a href="NF-indexcov-roc-chr17.html"><img src="NF-indexcov-roc-chr17.png" /></a>
+		</p>
+	
+		<p>
+		<a href="NF-indexcov-roc-chr18.html"><img src="NF-indexcov-roc-chr18.png" /></a>
+		</p>
+	
+		<p>
+		<a href="NF-indexcov-roc-chr2.html"><img src="NF-indexcov-roc-chr2.png" /></a>
+		</p>
+	
+		<p>
+		<a href="NF-indexcov-roc-chr20.html"><img src="NF-indexcov-roc-chr20.png" /></a>
+		</p>
+	
+		<p>
+		<a href="NF-indexcov-roc-chr21.html"><img src="NF-indexcov-roc-chr21.png" /></a>
+		</p>
+	
+		<p>
+		<a href="NF-indexcov-roc-chr22.html"><img src="NF-indexcov-roc-chr22.png" /></a>
+		</p>
+	
+		<p>
+		<a href="NF-indexcov-roc-chr5.html"><img src="NF-indexcov-roc-chr5.png" /></a>
+		</p>
+	
+		<p>
+		<a href="NF-indexcov-roc-chr6.html"><img src="NF-indexcov-roc-chr6.png" /></a>
+		</p>
+	
+		<p>
+		<a href="NF-indexcov-roc-chr7.html"><img src="NF-indexcov-roc-chr7.png" /></a>
+		</p>
+	
+		<p>
+		<a href="NF-indexcov-roc-chr8.html"><img src="NF-indexcov-roc-chr8.png" /></a>
+		</p>
+	
+		<p>
+		<a href="NF-indexcov-roc-chrX.html"><img src="NF-indexcov-roc-chrX.png" /></a>
+		</p>
+	
+		<p>
+		<a href="NF-indexcov-roc-chrY.html"><img src="NF-indexcov-roc-chrY.png" /></a>
+		</p>
+	
+
+<hr/>
+<h5>Acknowledgements</h5>
+<ul>
+	<li>created with <a href="https://github.com/brentp/goleft">goleft indexcov (version 0.2.3)</a> in <a href="https://golang.org">the go programming language</a></li>
+	<li>bam index parsing with <a href="https://github.com/biogo/hts">biogo/hts</a></li>
+	<li>interactive plots use <a href="http://www.chartjs.org/">chartjs(2)</a> via <a href="https://github.com/brentp/go-chartjs">go-chartjs</a></li>
+	<li>static plots and PCA by <a href="https://github.com/gonum/plot">gonum/plot</a>and <a href="https://github.com/gonum/matrix">gonum/matrix</a></li>
+</ul>
+
+	</div>
+	<div class="two">
+	<span class="tt">Depth Plots</span> <a class="help" href="https://github.com/brentp/goleft/blob/master/docs/indexcov/help-depth.md" target="_blank">?</a>
+	<p>
+	 Click each plot for an interactive view. 
+	</p>
+
+	
+		<p>
+
+		<a href="NF-indexcov-depth-chr1.html"><img src="NF-indexcov-depth-chr1.png" /></a>
+
+
+		</p>
+	
+		<p>
+
+		<a href="NF-indexcov-depth-chr10.html"><img src="NF-indexcov-depth-chr10.png" /></a>
+
+
+		</p>
+	
+		<p>
+
+		<a href="NF-indexcov-depth-chr11.html"><img src="NF-indexcov-depth-chr11.png" /></a>
+
+
+		</p>
+	
+		<p>
+
+		<a href="NF-indexcov-depth-chr12.html"><img src="NF-indexcov-depth-chr12.png" /></a>
+
+
+		</p>
+	
+		<p>
+
+		<a href="NF-indexcov-depth-chr13.html"><img src="NF-indexcov-depth-chr13.png" /></a>
+
+
+		</p>
+	
+		<p>
+
+		<a href="NF-indexcov-depth-chr14.html"><img src="NF-indexcov-depth-chr14.png" /></a>
+
+
+		</p>
+	
+		<p>
+
+		<a href="NF-indexcov-depth-chr15.html"><img src="NF-indexcov-depth-chr15.png" /></a>
+
+
+		</p>
+	
+		<p>
+
+		<a href="NF-indexcov-depth-chr16.html"><img src="NF-indexcov-depth-chr16.png" /></a>
+
+
+		</p>
+	
+		<p>
+
+		<a href="NF-indexcov-depth-chr17.html"><img src="NF-indexcov-depth-chr17.png" /></a>
+
+
+		</p>
+	
+		<p>
+
+		<a href="NF-indexcov-depth-chr18.html"><img src="NF-indexcov-depth-chr18.png" /></a>
+
+
+		</p>
+	
+		<p>
+
+		<a href="NF-indexcov-depth-chr2.html"><img src="NF-indexcov-depth-chr2.png" /></a>
+
+
+		</p>
+	
+		<p>
+
+		<a href="NF-indexcov-depth-chr20.html"><img src="NF-indexcov-depth-chr20.png" /></a>
+
+
+		</p>
+	
+		<p>
+
+		<a href="NF-indexcov-depth-chr21.html"><img src="NF-indexcov-depth-chr21.png" /></a>
+
+
+		</p>
+	
+		<p>
+
+		<a href="NF-indexcov-depth-chr22.html"><img src="NF-indexcov-depth-chr22.png" /></a>
+
+
+		</p>
+	
+		<p>
+
+		<a href="NF-indexcov-depth-chr5.html"><img src="NF-indexcov-depth-chr5.png" /></a>
+
+
+		</p>
+	
+		<p>
+
+		<a href="NF-indexcov-depth-chr6.html"><img src="NF-indexcov-depth-chr6.png" /></a>
+
+
+		</p>
+	
+		<p>
+
+		<a href="NF-indexcov-depth-chr7.html"><img src="NF-indexcov-depth-chr7.png" /></a>
+
+
+		</p>
+	
+		<p>
+
+		<a href="NF-indexcov-depth-chr8.html"><img src="NF-indexcov-depth-chr8.png" /></a>
+
+
+		</p>
+	
+		<p>
+
+		<a href="NF-indexcov-depth-chrX.html"><img src="NF-indexcov-depth-chrX.png" /></a>
+
+
+		</p>
+	
+		<p>
+
+		<a href="NF-indexcov-depth-chrY.html"><img src="NF-indexcov-depth-chrY.png" /></a>
+
+
+		</p>
+	
+	</div>
+
+
+    </body>
+    <script>
+	Chart.defaults.line.cubicInterpolationMode = 'monotone';
+	Chart.defaults.global.animation.duration = 0;
+
+    
+    
+
+
+    
+	var sex_ctx = document.getElementById("canvas-sex").getContext("2d");
+	var sex_chart = new Chart(sex_ctx, {"type":"line","label":"sex","data":{"datasets":[{"backgroundColor":"rgba(145, 186, 204, 0.941)","borderColor":"rgba(90, 90, 90, 0.588)","borderWidth":0,"label":"Inferred CN for chrX: 100000","fill":false,"lineTension":0,"pointBackgroundColor":"rgba(145, 186, 204, 0.941)","pointBorderWidth":0,"pointRadius":6,"pointHitRadius":6,"pointHoverRadius":0,"pointHoverBorderWidth":0,"showLine":false,"xAxisID":"xaxis0","yAxisID":"yaxis0","data":[{"x":100000.00,"y":6494.51},{"x":100000.00,"y":6775.27},{"x":100000.00,"y":7646.26},{"x":100000.00,"y":9884.50}]},{"backgroundColor":"rgba(93, 88, 38, 0.941)","borderColor":"rgba(90, 90, 90, 0.588)","borderWidth":0,"label":"Inferred CN for chrX: 9","fill":false,"lineTension":0,"pointBackgroundColor":"rgba(93, 88, 38, 0.941)","pointBorderWidth":0,"pointRadius":6,"pointHitRadius":6,"pointHoverRadius":0,"pointHoverBorderWidth":0,"showLine":false,"xAxisID":"xaxis0","yAxisID":"yaxis0","data":[{"x":8.91,"y":0.40},{"x":9.07,"y":0.47},{"x":9.05,"y":0.54},{"x":8.86,"y":0.57},{"x":9.02,"y":0.82}]},{"backgroundColor":"rgba(110, 240, 59, 0.941)","borderColor":"rgba(90, 90, 90, 0.588)","borderWidth":0,"label":"Inferred CN for chrX: 10","fill":false,"lineTension":0,"pointBackgroundColor":"rgba(110, 240, 59, 0.941)","pointBorderWidth":0,"pointRadius":6,"pointHitRadius":6,"pointHoverRadius":0,"pointHoverBorderWidth":0,"showLine":false,"xAxisID":"xaxis0","yAxisID":"yaxis0","data":[{"x":9.74,"y":0.61}]},{"backgroundColor":"rgba(220, 91, 150, 0.941)","borderColor":"rgba(90, 90, 90, 0.588)","borderWidth":0,"label":"Inferred CN for chrX: 16","fill":false,"lineTension":0,"pointBackgroundColor":"rgba(220, 91, 150, 0.941)","pointBorderWidth":0,"pointRadius":6,"pointHitRadius":6,"pointHoverRadius":0,"pointHoverBorderWidth":0,"showLine":false,"xAxisID":"xaxis0","yAxisID":"yaxis0","data":[{"x":15.94,"y":0.51}]},{"backgroundColor":"rgba(68, 213, 71, 0.941)","borderColor":"rgba(90, 90, 90, 0.588)","borderWidth":0,"label":"Inferred CN for chrX: 93682","fill":false,"lineTension":0,"pointBackgroundColor":"rgba(68, 213, 71, 0.941)","pointBorderWidth":0,"pointRadius":6,"pointHitRadius":6,"pointHoverRadius":0,"pointHoverBorderWidth":0,"showLine":false,"xAxisID":"xaxis0","yAxisID":"yaxis0","data":[{"x":93681.66,"y":6373.70}]},{"backgroundColor":"rgba(160, 252, 65, 0.941)","borderColor":"rgba(90, 90, 90, 0.588)","borderWidth":0,"label":"Inferred CN for chrX: 8","fill":false,"lineTension":0,"pointBackgroundColor":"rgba(160, 252, 65, 0.941)","pointBorderWidth":0,"pointRadius":6,"pointHitRadius":6,"pointHoverRadius":0,"pointHoverBorderWidth":0,"showLine":false,"xAxisID":"xaxis0","yAxisID":"yaxis0","data":[{"x":8.26,"y":0.37},{"x":7.95,"y":0.52},{"x":8.00,"y":0.64}]},{"backgroundColor":"rgba(20, 49, 39, 0.941)","borderColor":"rgba(90, 90, 90, 0.588)","borderWidth":0,"label":"Inferred CN for chrX: 58795","fill":false,"lineTension":0,"pointBackgroundColor":"rgba(20, 49, 39, 0.941)","pointBorderWidth":0,"pointRadius":6,"pointHitRadius":6,"pointHoverRadius":0,"pointHoverBorderWidth":0,"showLine":false,"xAxisID":"xaxis0","yAxisID":"yaxis0","data":[{"x":58795.41,"y":5799.33}]}],"labels":null},"options":{"responsive":false,"scales":{"xAxes":[{"type":"linear","position":"bottom","id":"xaxis0","scaleLabel":{"display":true,"labelString":"chrX Copy Number","fontSize":16},"ticks":{}}],"yAxes":[{"type":"linear","position":"left","id":"yaxis0","scaleLabel":{"display":true,"labelString":"chrY Copy Number","fontSize":16},"ticks":{}}]},"tooltips":{"mode":"nearest"}}});
+	var chart = sex_chart
+	
+	chart.options.hover.mode = 'index'
+	chart.options.tooltips.callbacks.title = function(tts, data) {
+		var names = [["15253220","16735815","19798746","19636311"],["19635806","19637582","18939364","15253254","15778186"],["15253278"],["19540613"],["15052132"],["19540644","14956284","15253242"],["15253233"]]
+		var out = []
+		tts.forEach(function(ti) {
+			out.push(names[ti.datasetIndex][ti.index])
+		})
+		return out.join(",")
+	}
+
+
+
+
+    
+	var bin_ctx = document.getElementById("canvas-bin").getContext("2d");
+	var bin_chart = new Chart(bin_ctx, {"type":"line","data":{"datasets":[{"backgroundColor":"rgba(110, 250, 59, 0.941)","borderColor":"rgba(150, 150, 150, 0.588)","borderWidth":0,"label":"samples","fill":false,"lineTension":0,"pointBackgroundColor":"rgba(110, 250, 59, 0.941)","pointBorderWidth":0,"pointRadius":4,"pointHitRadius":6,"pointHoverRadius":6,"pointHoverBorderWidth":0,"showLine":false,"xAxisID":"xaxis0","yAxisID":"yaxis0","data":[{"x":0.00041,"y":1.000},{"x":0.04225,"y":0.216},{"x":0.00050,"y":1.000},{"x":0.00251,"y":1.000},{"x":0.04154,"y":0.254},{"x":0.00049,"y":1.000},{"x":0.04153,"y":0.224},{"x":0.05696,"y":0.207},{"x":0.00249,"y":1.000},{"x":0.05692,"y":0.214},{"x":0.05627,"y":0.226},{"x":0.04225,"y":0.202},{"x":0.00249,"y":1.000},{"x":0.05685,"y":0.195},{"x":0.04155,"y":0.235},{"x":0.04134,"y":0.194}]}],"labels":null},"options":{"responsive":false,"scales":{"xAxes":[{"type":"linear","position":"bottom","id":"xaxis0","scaleLabel":{"display":true,"labelString":"proportion of bins with depth \u003c 0.15","fontSize":16},"ticks":{"min":-0.005249961679111832,"max":0.06261085685505946}}],"yAxes":[{"type":"linear","position":"left","id":"yaxis0","scaleLabel":{"display":true,"labelString":"proportion of bins with depth outside of (0.85, 1.15)","fontSize":16},"ticks":{"min":0.000001}}]},"legend":{"display":false},"tooltips":{"mode":"nearest"}}});
+	var chart = bin_chart
+	
+    bin_chart.options.tooltips.callbacks.title = function(tts, data) {
+        var names = ["15052132","19540644","15253233","15253220","19635806","16735815","15253278","19637582","19798746","18939364","14956284","19540613","19636311","15253254","15253242","15778186"]
+		var has_backgrounds = false
+        var out = []
+        tts.forEach(function(ti) {
+			if(has_backgrounds == (ti.datasetIndex == 1)) {
+                out.push(names[ti.index])
+	 	    } else {
+				out.push("background")
+			}
+        })
+        return out.join(",")
+    }
+
+    
+	var pca_ctx = document.getElementById("canvas-pca").getContext("2d");
+	var pca_chart = new Chart(pca_ctx, {"type":"line","data":{"datasets":[{"backgroundColor":"rgba(110, 250, 59, 0.941)","borderColor":"rgba(150, 150, 150, 0.588)","borderWidth":0,"label":"samples","fill":false,"lineTension":0,"pointBackgroundColor":"rgba(110, 250, 59, 0.941)","pointBorderWidth":0,"pointRadius":4,"pointHitRadius":6,"pointHoverRadius":6,"pointHoverBorderWidth":0,"showLine":false,"xAxisID":"xaxis0","yAxisID":"yaxis0","data":[{"x":-75343.67,"y":-314.27},{"x":-34815.46,"y":5334.43},{"x":-75342.87,"y":-271.59},{"x":-75248.45,"y":232.47},{"x":-34960.59,"y":-2117.00},{"x":-75342.99,"y":-300.31},{"x":-35193.15,"y":1168.62},{"x":-35487.29,"y":10007.86},{"x":-75249.31,"y":227.87},{"x":-35619.40,"y":1814.46},{"x":-35285.90,"y":-12903.51},{"x":-34833.15,"y":1296.73},{"x":-75249.35,"y":233.05},{"x":-35223.70,"y":6206.56},{"x":-35080.47,"y":1232.90},{"x":-35184.68,"y":-12322.14}]}],"labels":null},"options":{"responsive":false,"scales":{"xAxes":[{"type":"linear","position":"bottom","id":"xaxis0","scaleLabel":{"display":true,"labelString":"PC1 (variance explained: 58.28%)","fontSize":16}}],"yAxes":[{"type":"linear","position":"left","id":"yaxis0","scaleLabel":{"display":true,"labelString":"PC2 (variance explained: 4.81%)","fontSize":16}}]},"legend":{"display":false},"tooltips":{"mode":"nearest"}}});
+	var chart = pca_chart
+	
+	chart.options.hover.mode = 'index';
+	chart.options.tooltips.callbacks.title = function(tts, data) {
+        var names = ["15052132","19540644","15253233","15253220","19635806","16735815","15253278","19637582","19798746","18939364","14956284","19540613","19636311","15253254","15253242","15778186"]
+        var has_backgrounds = false
+        var out = []
+        tts.forEach(function(ti) {
+            if(has_backgrounds == (ti.datasetIndex == 1)) {
+                out.push(names[ti.index])
+            } else {
+                out.push("background")
+            }
+        })
+        return out.join(",")
+    }
+
+    
+	var pcb_ctx = document.getElementById("canvas-pcb").getContext("2d");
+	var pcb_chart = new Chart(pcb_ctx, {"type":"line","data":{"datasets":[{"backgroundColor":"rgba(110, 250, 59, 0.941)","borderColor":"rgba(150, 150, 150, 0.588)","borderWidth":0,"label":"samples","fill":false,"lineTension":0,"pointBackgroundColor":"rgba(110, 250, 59, 0.941)","pointBorderWidth":0,"pointRadius":4,"pointHitRadius":6,"pointHoverRadius":6,"pointHoverBorderWidth":0,"showLine":false,"xAxisID":"xaxis0","yAxisID":"yaxis0","data":[{"x":-75343.67,"y":-290.88},{"x":-34815.46,"y":-12.00},{"x":-75342.87,"y":-304.62},{"x":-75248.45,"y":-447.63},{"x":-34960.59,"y":-3723.78},{"x":-75342.99,"y":-297.52},{"x":-35193.15,"y":-9188.42},{"x":-35487.29,"y":7166.61},{"x":-75249.31,"y":-454.68},{"x":-35619.40,"y":11379.00},{"x":-35285.90,"y":1914.51},{"x":-34833.15,"y":-8197.03},{"x":-75249.35,"y":-449.61},{"x":-35223.70,"y":3106.02},{"x":-35080.47,"y":-10291.32},{"x":-35184.68,"y":4910.23}]}],"labels":null},"options":{"responsive":false,"scales":{"xAxes":[{"type":"linear","position":"bottom","id":"xaxis0","scaleLabel":{"display":true,"labelString":"PC1 (variance explained: 58.28%)","fontSize":16}}],"yAxes":[{"type":"linear","position":"left","id":"yaxis0","scaleLabel":{"display":true,"labelString":"PC3 (variance explained: 4.72%)","fontSize":16}}]},"legend":{"display":false},"tooltips":{"mode":"nearest"}}});
+	var chart = pcb_chart
+	
+	chart.options.hover.mode = 'index';
+	chart.options.tooltips.callbacks.title = function(tts, data) {
+        var names = ["15052132","19540644","15253233","15253220","19635806","16735815","15253278","19637582","19798746","18939364","14956284","19540613","19636311","15253254","15253242","15778186"]
+        var has_backgrounds = false
+        var out = []
+        tts.forEach(function(ti) {
+            if(has_backgrounds == (ti.datasetIndex == 1)) {
+                out.push(names[ti.index])
+            } else {
+                out.push("background")
+            }
+        })
+        return out.join(",")
+    }
+
+    </script>
+</html>

@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+
+	<title>NF:indexcov</title>
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.js"></script>
+		<style type="text/css">
+section {
+    width: 96%;
+    height: 425px;
+    margin: auto;
+    padding: 8px;
+}
+
+.help {
+	font-family: Lucida Console;
+	font-face: bold;
+	font-size: +2em;
+    padding: 2px;
+	border: 1px solid #aaa
+}
+
+
+.tt {
+	font-family: Lucida Console;
+    border: 2px solid #aaa;
+    padding: 2px;
+	height: auto;
+}
+
+.a3 {
+    width: 32%;
+    height: 380px;
+    float: left;
+    padding: 2px;
+}
+.b3 {
+    width: 32%;
+    margin-left: 32%;
+    height: 380px;
+    padding: 2px;
+}
+.c3 {
+    width: 32%;
+    margin-left: 32%;
+    height: 380px;
+    padding: 2px;
+}
+
+.one {
+    width: 48%;
+    height: 380px;
+    float: left;
+    padding: 2px;
+}
+.two {
+    width: 48%;
+    margin-left: 48%;
+    height: 380px;
+    padding: 2px;
+}
+		</style>
+
+    </head>
+    <body>
+<span class="top-help">
+This is the <a href="https://github.com/brentp/goleft/tree/master/indexcov">indexcov</a> summary page created with version 0.2.3.<br/>
+Click the <span class="help">?</span> above each plot for help describing that type of plot.
+</span>
+
+
+	<section>
+	<table style="width:100%">
+	<tr>
+	<td>
+	<span class="tt">Inferred sex</span> <a class="help" href="https://github.com/brentp/goleft/blob/master/docs/indexcov/help-sex.md" target="_blank">?</a>
+	
+	<canvas id="canvas-sex" style="height:380px;width:380px"></canvas>
+	
+	</td>
+
+	<td>
+	
+	</td>
+
+	<td>
+	<span class="tt">Bin Counts</span> <a class="help" href="https://github.com/brentp/goleft/blob/master/docs/indexcov/help-bin.md" target="_blank">?</a>
+	<canvas id="canvas-bin" style="height:380px;width:380px"></canvas>
+	</td>
+	</tr>
+	</table>
+
+
+	</section>
+	<hr>
+
+
+<section style="height:auto">
+	<div class="one" style="height:auto">
+	<span class="tt">Pedigree File</span>
+	<p>contains inferred sex, bins counts, and PCA values used to make the above plots</p>
+	<a href="NF-indexcov.ped">NF-indexcov.ped</a>
+	</div>
+
+	<div class="two" style="height:auto">
+	<span class="tt">Coverage BED File</span>
+	<p>contains scaled coverage for every sample (each column) for each 16,384 interval in the index</p>
+	<a href="NF-indexcov.bed.gz">NF-indexcov.bed.gz</a>
+	</div>
+
+</section><hr/>
+
+
+
+
+<section style="height:auto">
+	<div class="one">
+	<span class="tt">PCA: 1 vs 2</span>
+	<a class="help" href="https://github.com/brentp/goleft/blob/master/docs/indexcov/help-pca.md" target="_blank">?</a>
+	<canvas id="canvas-pca" style="height:380px;width:380px"></canvas>
+	</div>
+
+	<div class="two">
+	<span class="tt">PCA: 1 vs 3</span>
+	<a class="help" href="https://github.com/brentp/goleft/blob/master/docs/indexcov/help-pca.md" target="_blank">?</a>
+	<canvas id="canvas-pcb" style="height:380px;width:380px"></canvas>
+	</div>
+
+</section><hr/>
+
+
+
+<section style="height:auto">
+
+
+	<div class="one">
+	<span class="tt">Coverage Plots</span> <a class="help" href="https://github.com/brentp/goleft/blob/master/docs/indexcov/help-depth.md#coverage" target="_blank">?</a>
+	<p>Click each plot for an interactive view.</p>
+
+	
+	
+		<p>
+		<a href="NF-indexcov-roc-chr1.html"><img src="NF-indexcov-roc-chr1.png" /></a>
+		</p>
+	
+		<p>
+		<a href="NF-indexcov-roc-chr10.html"><img src="NF-indexcov-roc-chr10.png" /></a>
+		</p>
+	
+		<p>
+		<a href="NF-indexcov-roc-chr11.html"><img src="NF-indexcov-roc-chr11.png" /></a>
+		</p>
+	
+		<p>
+		<a href="NF-indexcov-roc-chr12.html"><img src="NF-indexcov-roc-chr12.png" /></a>
+		</p>
+	
+		<p>
+		<a href="NF-indexcov-roc-chr13.html"><img src="NF-indexcov-roc-chr13.png" /></a>
+		</p>
+	
+		<p>
+		<a href="NF-indexcov-roc-chr14.html"><img src="NF-indexcov-roc-chr14.png" /></a>
+		</p>
+	
+		<p>
+		<a href="NF-indexcov-roc-chr15.html"><img src="NF-indexcov-roc-chr15.png" /></a>
+		</p>
+	
+		<p>
+		<a href="NF-indexcov-roc-chr16.html"><img src="NF-indexcov-roc-chr16.png" /></a>
+		</p>
+	
+		<p>
+		<a href="NF-indexcov-roc-chr17.html"><img src="NF-indexcov-roc-chr17.png" /></a>
+		</p>
+	
+		<p>
+		<a href="NF-indexcov-roc-chr18.html"><img src="NF-indexcov-roc-chr18.png" /></a>
+		</p>
+	
+		<p>
+		<a href="NF-indexcov-roc-chr2.html"><img src="NF-indexcov-roc-chr2.png" /></a>
+		</p>
+	
+		<p>
+		<a href="NF-indexcov-roc-chr20.html"><img src="NF-indexcov-roc-chr20.png" /></a>
+		</p>
+	
+		<p>
+		<a href="NF-indexcov-roc-chr21.html"><img src="NF-indexcov-roc-chr21.png" /></a>
+		</p>
+	
+		<p>
+		<a href="NF-indexcov-roc-chr22.html"><img src="NF-indexcov-roc-chr22.png" /></a>
+		</p>
+	
+		<p>
+		<a href="NF-indexcov-roc-chr5.html"><img src="NF-indexcov-roc-chr5.png" /></a>
+		</p>
+	
+		<p>
+		<a href="NF-indexcov-roc-chr6.html"><img src="NF-indexcov-roc-chr6.png" /></a>
+		</p>
+	
+		<p>
+		<a href="NF-indexcov-roc-chr7.html"><img src="NF-indexcov-roc-chr7.png" /></a>
+		</p>
+	
+		<p>
+		<a href="NF-indexcov-roc-chr8.html"><img src="NF-indexcov-roc-chr8.png" /></a>
+		</p>
+	
+		<p>
+		<a href="NF-indexcov-roc-chrX.html"><img src="NF-indexcov-roc-chrX.png" /></a>
+		</p>
+	
+		<p>
+		<a href="NF-indexcov-roc-chrY.html"><img src="NF-indexcov-roc-chrY.png" /></a>
+		</p>
+	
+
+<hr/>
+<h5>Acknowledgements</h5>
+<ul>
+	<li>created with <a href="https://github.com/brentp/goleft">goleft indexcov (version 0.2.3)</a> in <a href="https://golang.org">the go programming language</a></li>
+	<li>bam index parsing with <a href="https://github.com/biogo/hts">biogo/hts</a></li>
+	<li>interactive plots use <a href="http://www.chartjs.org/">chartjs(2)</a> via <a href="https://github.com/brentp/go-chartjs">go-chartjs</a></li>
+	<li>static plots and PCA by <a href="https://github.com/gonum/plot">gonum/plot</a>and <a href="https://github.com/gonum/matrix">gonum/matrix</a></li>
+</ul>
+
+	</div>
+	<div class="two">
+	<span class="tt">Depth Plots</span> <a class="help" href="https://github.com/brentp/goleft/blob/master/docs/indexcov/help-depth.md" target="_blank">?</a>
+	<p>
+	 Click each plot for an interactive view. 
+	</p>
+
+	
+		<p>
+
+		<a href="NF-indexcov-depth-chr1.html"><img src="NF-indexcov-depth-chr1.png" /></a>
+
+
+		</p>
+	
+		<p>
+
+		<a href="NF-indexcov-depth-chr10.html"><img src="NF-indexcov-depth-chr10.png" /></a>
+
+
+		</p>
+	
+		<p>
+
+		<a href="NF-indexcov-depth-chr11.html"><img src="NF-indexcov-depth-chr11.png" /></a>
+
+
+		</p>
+	
+		<p>
+
+		<a href="NF-indexcov-depth-chr12.html"><img src="NF-indexcov-depth-chr12.png" /></a>
+
+
+		</p>
+	
+		<p>
+
+		<a href="NF-indexcov-depth-chr13.html"><img src="NF-indexcov-depth-chr13.png" /></a>
+
+
+		</p>
+	
+		<p>
+
+		<a href="NF-indexcov-depth-chr14.html"><img src="NF-indexcov-depth-chr14.png" /></a>
+
+
+		</p>
+	
+		<p>
+
+		<a href="NF-indexcov-depth-chr15.html"><img src="NF-indexcov-depth-chr15.png" /></a>
+
+
+		</p>
+	
+		<p>
+
+		<a href="NF-indexcov-depth-chr16.html"><img src="NF-indexcov-depth-chr16.png" /></a>
+
+
+		</p>
+	
+		<p>
+
+		<a href="NF-indexcov-depth-chr17.html"><img src="NF-indexcov-depth-chr17.png" /></a>
+
+
+		</p>
+	
+		<p>
+
+		<a href="NF-indexcov-depth-chr18.html"><img src="NF-indexcov-depth-chr18.png" /></a>
+
+
+		</p>
+	
+		<p>
+
+		<a href="NF-indexcov-depth-chr2.html"><img src="NF-indexcov-depth-chr2.png" /></a>
+
+
+		</p>
+	
+		<p>
+
+		<a href="NF-indexcov-depth-chr20.html"><img src="NF-indexcov-depth-chr20.png" /></a>
+
+
+		</p>
+	
+		<p>
+
+		<a href="NF-indexcov-depth-chr21.html"><img src="NF-indexcov-depth-chr21.png" /></a>
+
+
+		</p>
+	
+		<p>
+
+		<a href="NF-indexcov-depth-chr22.html"><img src="NF-indexcov-depth-chr22.png" /></a>
+
+
+		</p>
+	
+		<p>
+
+		<a href="NF-indexcov-depth-chr5.html"><img src="NF-indexcov-depth-chr5.png" /></a>
+
+
+		</p>
+	
+		<p>
+
+		<a href="NF-indexcov-depth-chr6.html"><img src="NF-indexcov-depth-chr6.png" /></a>
+
+
+		</p>
+	
+		<p>
+
+		<a href="NF-indexcov-depth-chr7.html"><img src="NF-indexcov-depth-chr7.png" /></a>
+
+
+		</p>
+	
+		<p>
+
+		<a href="NF-indexcov-depth-chr8.html"><img src="NF-indexcov-depth-chr8.png" /></a>
+
+
+		</p>
+	
+		<p>
+
+		<a href="NF-indexcov-depth-chrX.html"><img src="NF-indexcov-depth-chrX.png" /></a>
+
+
+		</p>
+	
+		<p>
+
+		<a href="NF-indexcov-depth-chrY.html"><img src="NF-indexcov-depth-chrY.png" /></a>
+
+
+		</p>
+	
+	</div>
+
+
+    </body>
+    <script>
+	Chart.defaults.line.cubicInterpolationMode = 'monotone';
+	Chart.defaults.global.animation.duration = 0;
+
+    
+    
+
+
+    
+	var sex_ctx = document.getElementById("canvas-sex").getContext("2d");
+	var sex_chart = new Chart(sex_ctx, {"type":"line","label":"sex","data":{"datasets":[{"backgroundColor":"rgba(92, 211, 168, 0.941)","borderColor":"rgba(90, 90, 90, 0.588)","borderWidth":0,"label":"Inferred CN for chrX: 6","fill":false,"lineTension":0,"pointBackgroundColor":"rgba(92, 211, 168, 0.941)","pointBorderWidth":0,"pointRadius":6,"pointHitRadius":6,"pointHoverRadius":0,"pointHoverBorderWidth":0,"showLine":false,"xAxisID":"xaxis0","yAxisID":"yaxis0","data":[{"x":6.36,"y":0.34}]},{"backgroundColor":"rgba(160, 252, 65, 0.941)","borderColor":"rgba(90, 90, 90, 0.588)","borderWidth":0,"label":"Inferred CN for chrX: 8","fill":false,"lineTension":0,"pointBackgroundColor":"rgba(160, 252, 65, 0.941)","pointBorderWidth":0,"pointRadius":6,"pointHitRadius":6,"pointHoverRadius":0,"pointHoverBorderWidth":0,"showLine":false,"xAxisID":"xaxis0","yAxisID":"yaxis0","data":[{"x":8.26,"y":0.37},{"x":8.47,"y":0.44},{"x":7.95,"y":0.52},{"x":7.93,"y":0.44},{"x":8.00,"y":0.64}]},{"backgroundColor":"rgba(93, 88, 38, 0.941)","borderColor":"rgba(90, 90, 90, 0.588)","borderWidth":0,"label":"Inferred CN for chrX: 9","fill":false,"lineTension":0,"pointBackgroundColor":"rgba(93, 88, 38, 0.941)","pointBorderWidth":0,"pointRadius":6,"pointHitRadius":6,"pointHoverRadius":0,"pointHoverBorderWidth":0,"showLine":false,"xAxisID":"xaxis0","yAxisID":"yaxis0","data":[{"x":8.91,"y":0.40},{"x":9.07,"y":0.47},{"x":9.05,"y":0.54},{"x":8.86,"y":0.57},{"x":9.02,"y":0.82}]},{"backgroundColor":"rgba(110, 240, 59, 0.941)","borderColor":"rgba(90, 90, 90, 0.588)","borderWidth":0,"label":"Inferred CN for chrX: 10","fill":false,"lineTension":0,"pointBackgroundColor":"rgba(110, 240, 59, 0.941)","pointBorderWidth":0,"pointRadius":6,"pointHitRadius":6,"pointHoverRadius":0,"pointHoverBorderWidth":0,"showLine":false,"xAxisID":"xaxis0","yAxisID":"yaxis0","data":[{"x":9.74,"y":0.61}]},{"backgroundColor":"rgba(220, 91, 150, 0.941)","borderColor":"rgba(90, 90, 90, 0.588)","borderWidth":0,"label":"Inferred CN for chrX: 16","fill":false,"lineTension":0,"pointBackgroundColor":"rgba(220, 91, 150, 0.941)","pointBorderWidth":0,"pointRadius":6,"pointHitRadius":6,"pointHoverRadius":0,"pointHoverBorderWidth":0,"showLine":false,"xAxisID":"xaxis0","yAxisID":"yaxis0","data":[{"x":15.94,"y":0.51}]},{"backgroundColor":"rgba(29, 212, 117, 0.941)","borderColor":"rgba(90, 90, 90, 0.588)","borderWidth":0,"label":"Inferred CN for chrX: 4","fill":false,"lineTension":0,"pointBackgroundColor":"rgba(29, 212, 117, 0.941)","pointBorderWidth":0,"pointRadius":6,"pointHitRadius":6,"pointHoverRadius":0,"pointHoverBorderWidth":0,"showLine":false,"xAxisID":"xaxis0","yAxisID":"yaxis0","data":[{"x":4.10,"y":0.50}]}],"labels":null},"options":{"responsive":false,"scales":{"xAxes":[{"type":"linear","position":"bottom","id":"xaxis0","scaleLabel":{"display":true,"labelString":"chrX Copy Number","fontSize":16},"ticks":{}}],"yAxes":[{"type":"linear","position":"left","id":"yaxis0","scaleLabel":{"display":true,"labelString":"chrY Copy Number","fontSize":16},"ticks":{}}]},"tooltips":{"mode":"nearest"}}});
+	var chart = sex_chart
+	
+	chart.options.hover.mode = 'index'
+	chart.options.tooltips.callbacks.title = function(tts, data) {
+		var names = [["15095987"],["19540644","20635465","14956284","20061413","15253242"],["19635806","19637582","18939364","15253254","15778186"],["15253278"],["19540613"],["15096058"]]
+		var out = []
+		tts.forEach(function(ti) {
+			out.push(names[ti.datasetIndex][ti.index])
+		})
+		return out.join(",")
+	}
+
+
+
+
+    
+	var bin_ctx = document.getElementById("canvas-bin").getContext("2d");
+	var bin_chart = new Chart(bin_ctx, {"type":"line","data":{"datasets":[{"backgroundColor":"rgba(110, 250, 59, 0.941)","borderColor":"rgba(150, 150, 150, 0.588)","borderWidth":0,"label":"samples","fill":false,"lineTension":0,"pointBackgroundColor":"rgba(110, 250, 59, 0.941)","pointBorderWidth":0,"pointRadius":4,"pointHitRadius":6,"pointHoverRadius":6,"pointHoverBorderWidth":0,"showLine":false,"xAxisID":"xaxis0","yAxisID":"yaxis0","data":[{"x":0.04247,"y":0.212},{"x":0.04225,"y":0.216},{"x":0.04154,"y":0.254},{"x":0.04224,"y":0.224},{"x":0.04153,"y":0.224},{"x":0.05696,"y":0.207},{"x":0.05692,"y":0.214},{"x":0.05627,"y":0.226},{"x":0.04225,"y":0.202},{"x":0.04225,"y":0.210},{"x":0.05685,"y":0.195},{"x":0.04155,"y":0.235},{"x":0.04134,"y":0.194},{"x":0.04191,"y":0.206}]}],"labels":null},"options":{"responsive":false,"scales":{"xAxes":[{"type":"linear","position":"bottom","id":"xaxis0","scaleLabel":{"display":true,"labelString":"proportion of bins with depth \u003c 0.15","fontSize":16},"ticks":{"min":0.0397814614491865,"max":0.05851709111612324}}],"yAxes":[{"type":"linear","position":"left","id":"yaxis0","scaleLabel":{"display":true,"labelString":"proportion of bins with depth outside of (0.85, 1.15)","fontSize":16},"ticks":{"min":0.000001}}]},"legend":{"display":false},"tooltips":{"mode":"nearest"}}});
+	var chart = bin_chart
+	
+    bin_chart.options.tooltips.callbacks.title = function(tts, data) {
+        var names = ["15095987","19540644","19635806","20635465","15253278","19637582","18939364","14956284","19540613","20061413","15253254","15253242","15778186","15096058"]
+		var has_backgrounds = false
+        var out = []
+        tts.forEach(function(ti) {
+			if(has_backgrounds == (ti.datasetIndex == 1)) {
+                out.push(names[ti.index])
+	 	    } else {
+				out.push("background")
+			}
+        })
+        return out.join(",")
+    }
+
+    
+	var pca_ctx = document.getElementById("canvas-pca").getContext("2d");
+	var pca_chart = new Chart(pca_ctx, {"type":"line","data":{"datasets":[{"backgroundColor":"rgba(110, 250, 59, 0.941)","borderColor":"rgba(150, 150, 150, 0.588)","borderWidth":0,"label":"samples","fill":false,"lineTension":0,"pointBackgroundColor":"rgba(110, 250, 59, 0.941)","pointBorderWidth":0,"pointRadius":4,"pointHitRadius":6,"pointHoverRadius":6,"pointHoverBorderWidth":0,"showLine":false,"xAxisID":"xaxis0","yAxisID":"yaxis0","data":[{"x":-7927.89,"y":5505.64},{"x":7010.65,"y":3190.11},{"x":493.25,"y":-3785.72},{"x":-1733.22,"y":-9770.87},{"x":3029.90,"y":-5156.46},{"x":8657.05,"y":5687.94},{"x":4039.37,"y":10227.08},{"x":-11034.40,"y":3000.09},{"x":3214.60,"y":-3551.84},{"x":1517.80,"y":-2962.06},{"x":7359.84,"y":5662.34},{"x":1764.36,"y":-8225.62},{"x":-7423.52,"y":7377.73},{"x":-6511.62,"y":-1372.18}]}],"labels":null},"options":{"responsive":false,"scales":{"xAxes":[{"type":"linear","position":"bottom","id":"xaxis0","scaleLabel":{"display":true,"labelString":"PC1 (variance explained: 8.10%)","fontSize":16}}],"yAxes":[{"type":"linear","position":"left","id":"yaxis0","scaleLabel":{"display":true,"labelString":"PC2 (variance explained: 8.00%)","fontSize":16}}]},"legend":{"display":false},"tooltips":{"mode":"nearest"}}});
+	var chart = pca_chart
+	
+	chart.options.hover.mode = 'index';
+	chart.options.tooltips.callbacks.title = function(tts, data) {
+        var names = ["15095987","19540644","19635806","20635465","15253278","19637582","18939364","14956284","19540613","20061413","15253254","15253242","15778186","15096058"]
+        var has_backgrounds = false
+        var out = []
+        tts.forEach(function(ti) {
+            if(has_backgrounds == (ti.datasetIndex == 1)) {
+                out.push(names[ti.index])
+            } else {
+                out.push("background")
+            }
+        })
+        return out.join(",")
+    }
+
+    
+	var pcb_ctx = document.getElementById("canvas-pcb").getContext("2d");
+	var pcb_chart = new Chart(pcb_ctx, {"type":"line","data":{"datasets":[{"backgroundColor":"rgba(110, 250, 59, 0.941)","borderColor":"rgba(150, 150, 150, 0.588)","borderWidth":0,"label":"samples","fill":false,"lineTension":0,"pointBackgroundColor":"rgba(110, 250, 59, 0.941)","pointBorderWidth":0,"pointRadius":4,"pointHitRadius":6,"pointHoverRadius":6,"pointHoverBorderWidth":0,"showLine":false,"xAxisID":"xaxis0","yAxisID":"yaxis0","data":[{"x":-7927.89,"y":-4845.71},{"x":7010.65,"y":4685.24},{"x":493.25,"y":-7897.11},{"x":-1733.22,"y":-3442.22},{"x":3029.90,"y":-833.70},{"x":8657.05,"y":-277.89},{"x":4039.37,"y":-8615.46},{"x":-11034.40,"y":2401.05},{"x":3214.60,"y":8746.29},{"x":1517.80,"y":-9133.11},{"x":7359.84,"y":5929.44},{"x":1764.36,"y":-890.50},{"x":-7423.52,"y":137.27},{"x":-6511.62,"y":9701.18}]}],"labels":null},"options":{"responsive":false,"scales":{"xAxes":[{"type":"linear","position":"bottom","id":"xaxis0","scaleLabel":{"display":true,"labelString":"PC1 (variance explained: 8.10%)","fontSize":16}}],"yAxes":[{"type":"linear","position":"left","id":"yaxis0","scaleLabel":{"display":true,"labelString":"PC3 (variance explained: 7.86%)","fontSize":16}}]},"legend":{"display":false},"tooltips":{"mode":"nearest"}}});
+	var chart = pcb_chart
+	
+	chart.options.hover.mode = 'index';
+	chart.options.tooltips.callbacks.title = function(tts, data) {
+        var names = ["15095987","19540644","19635806","20635465","15253278","19637582","18939364","14956284","19540613","20061413","15253254","15253242","15778186","15096058"]
+        var has_backgrounds = false
+        var out = []
+        tts.forEach(function(ti) {
+            if(has_backgrounds == (ti.datasetIndex == 1)) {
+                out.push(names[ti.index])
+            } else {
+                out.push("background")
+            }
+        })
+        return out.join(",")
+    }
+
+    </script>
+</html>

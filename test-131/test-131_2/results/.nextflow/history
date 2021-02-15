@@ -1,0 +1,2 @@
+2021-02-11 16:00:57	34.3s	fabulous_gates	OK	a1ea4d4c64d47e36c94500914182496f8edd2391	08000624-8f58-45c3-8410-a5ffd40a81c0	nextflow run brwnj/covviz -latest -profile docker --indexes '/data/iget/test/*crai' --fai /home/ubuntu/data/hg38.fa.fai
+2021-02-11 16:03:50	24.6s	kickass_majorana	OK	a1ea4d4c64d47e36c94500914182496f8edd2391	429c17d5-c1d0-4b83-a676-1cf608dd72b2	nextflow run brwnj/covviz -latest -profile docker --indexes '/data/iget/test/*crai' --fai /home/ubuntu/data/hg38.fa.fai

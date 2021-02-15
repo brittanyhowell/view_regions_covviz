@@ -1,0 +1,91 @@
+Feb-11 16:00:53.917 [main] DEBUG nextflow.cli.Launcher - $> nextflow run brwnj/covviz -latest -profile docker --indexes '/data/iget/test/*crai' --fai /home/ubuntu/data/hg38.fa.fai
+Feb-11 16:00:54.037 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 20.10.0
+Feb-11 16:00:55.446 [main] DEBUG nextflow.scm.AssetManager - Git config: /home/ubuntu/.nextflow/assets/brwnj/covviz/.git/config; branch: master; remote: origin; url: https://github.com/brwnj/covviz.git
+Feb-11 16:00:55.460 [main] DEBUG nextflow.scm.AssetManager - Git config: /home/ubuntu/.nextflow/assets/brwnj/covviz/.git/config; branch: master; remote: origin; url: https://github.com/brwnj/covviz.git
+Feb-11 16:00:55.463 [main] INFO  nextflow.cli.CmdRun - Pulling brwnj/covviz ...
+Feb-11 16:00:55.463 [main] DEBUG nextflow.scm.AssetManager - Pull pipeline brwnj/covviz  -- Using local path: /home/ubuntu/.nextflow/assets/brwnj/covviz
+Feb-11 16:00:57.377 [main] INFO  nextflow.cli.CmdRun -  Already-up-to-date
+Feb-11 16:00:57.380 [main] INFO  nextflow.cli.CmdRun - Launching `brwnj/covviz` [fabulous_gates] - revision: a1ea4d4c64 [master]
+Feb-11 16:00:57.401 [main] DEBUG nextflow.config.ConfigBuilder - Found config base: /home/ubuntu/.nextflow/assets/brwnj/covviz/nextflow.config
+Feb-11 16:00:57.402 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/ubuntu/.nextflow/assets/brwnj/covviz/nextflow.config
+Feb-11 16:00:57.409 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `docker`
+Feb-11 16:00:57.517 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [singularity, none, docker]
+Feb-11 16:00:57.576 [main] DEBUG nextflow.Session - Session uuid: 08000624-8f58-45c3-8410-a5ffd40a81c0
+Feb-11 16:00:57.577 [main] DEBUG nextflow.Session - Run name: fabulous_gates
+Feb-11 16:00:57.577 [main] DEBUG nextflow.Session - Executor pool size: 2
+Feb-11 16:00:57.589 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 20.10.0 build 5430
+  Created: 01-11-2020 15:14 UTC 
+  System: Linux 4.15.0-112-generic
+  Runtime: Groovy 3.0.5 on OpenJDK 64-Bit Server VM 1.8.0_152-release-1056-b12
+  Encoding: UTF-8 (UTF-8)
+  Process: 11077@pet-bh10-gn5 [192.168.252.229]
+  CPUs: 2 - Mem: 16.4 GB (9.9 GB) - Swap: 0 (0)
+Feb-11 16:00:57.611 [main] DEBUG nextflow.Session - Work-dir: /home/ubuntu/data/results/work [ext2/ext3]
+Feb-11 16:00:57.612 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /home/ubuntu/.nextflow/assets/brwnj/covviz/bin
+Feb-11 16:00:57.677 [main] DEBUG nextflow.Session - Observer factory: TowerFactory
+Feb-11 16:00:57.679 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Feb-11 16:00:57.854 [main] DEBUG nextflow.Session - Session start invoked
+Feb-11 16:00:57.858 [main] DEBUG nextflow.trace.TraceFileObserver - Flow starting -- trace file: /home/ubuntu/data/results/results/logs/trace.txt
+Feb-11 16:00:58.540 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Feb-11 16:00:58.756 [main] DEBUG nextflow.Session - Workflow process names [dsl1]: build_report, run_indexcov, merge_peds
+Feb-11 16:00:58.771 [main] INFO  nextflow.Nextflow - 
+
+Feb-11 16:00:58.773 [main] INFO  nextflow.Nextflow - ====================================================================
+Feb-11 16:00:58.774 [main] INFO  nextflow.Nextflow - covviz - find large, coverage-based variations on chromosomes 
+Feb-11 16:00:58.774 [main] INFO  nextflow.Nextflow - ====================================================================
+Feb-11 16:00:58.775 [main] INFO  nextflow.Nextflow - 
+
+Feb-11 16:00:58.776 [main] INFO  nextflow.Nextflow - #### Homepage / Documentation
+Feb-11 16:00:58.776 [main] INFO  nextflow.Nextflow - https://github.com/brwnj/covviz
+Feb-11 16:00:58.778 [main] INFO  nextflow.Nextflow - #### Authors
+Feb-11 16:00:58.780 [main] INFO  nextflow.Nextflow - Joe Brown <brwnjm@gmail.com>
+Feb-11 16:00:58.781 [main] INFO  nextflow.Nextflow - 
+
+Feb-11 16:00:58.781 [main] INFO  nextflow.Nextflow - ====================================================================
+Feb-11 16:00:58.781 [main] INFO  nextflow.Nextflow - 
+
+Feb-11 16:00:58.782 [main] INFO  nextflow.Nextflow - Alignment indexes            --indexes          : /data/iget/test/*crai
+Feb-11 16:00:58.783 [main] INFO  nextflow.Nextflow - Reference index              --fai              : /home/ubuntu/data/hg38.fa.fai
+Feb-11 16:00:58.784 [main] INFO  nextflow.Nextflow - Sex chromosomes              --sexchroms        : X,Y
+Feb-11 16:00:58.784 [main] INFO  nextflow.Nextflow - Excluded chroms              --exclude          : ^GL|^hs|EBV$|M$|MT$|^NC|_random$|Un_|^HLA\-|_alt$|hap\d+$
+Feb-11 16:00:58.785 [main] INFO  nextflow.Nextflow - Z threshold                  --zthreshold       : 3.5
+Feb-11 16:00:58.786 [main] INFO  nextflow.Nextflow - Distance threshold           --distancethreshold: 150000
+Feb-11 16:00:58.786 [main] INFO  nextflow.Nextflow - Significant region slop      --slop             : 500000
+Feb-11 16:00:58.787 [main] INFO  nextflow.Nextflow - 
+
+Feb-11 16:00:58.787 [main] INFO  nextflow.Nextflow - ====================================================================
+Feb-11 16:00:58.787 [main] INFO  nextflow.Nextflow - covviz is free and unrestricted for non-commercial use.       
+Feb-11 16:00:58.787 [main] INFO  nextflow.Nextflow - For commercial use, please contact [bpedersen@base2genomics.com].  
+Feb-11 16:00:58.788 [main] INFO  nextflow.Nextflow - ====================================================================
+Feb-11 16:00:58.788 [main] INFO  nextflow.Nextflow - 
+
+Feb-11 16:00:58.822 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /data/iget/test/; pattern: *crai; options: [checkIfExists:true]
+Feb-11 16:00:59.001 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:indexcov` matches label `indexcov` for process with name run_indexcov
+Feb-11 16:00:59.007 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-11 16:00:59.012 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-11 16:00:59.016 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Feb-11 16:00:59.024 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=2; memory=16.4 GB; capacity=2; pollInterval=100ms; dumpInterval=5m
+Feb-11 16:00:59.135 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-11 16:00:59.135 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-11 16:00:59.174 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-11 16:00:59.175 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-11 16:00:59.186 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Feb-11 16:00:59.186 [main] DEBUG nextflow.Session - Session await
+Feb-11 16:00:59.487 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-11 16:00:59.492 [Task submitter] INFO  nextflow.Session - [b8/536542] Submitted process > run_indexcov
+Feb-11 16:01:05.416 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: run_indexcov; status: COMPLETED; exit: 0; error: -; workDir: /home/ubuntu/data/results/work/b8/53654270417cc54eea91af73dc0430]
+Feb-11 16:01:05.496 [Task monitor] DEBUG n.util.BlockingThreadExecutorFactory - Thread pool name=FileTransfer; maxThreads=6; maxQueueSize=18; keepAlive=1m
+Feb-11 16:01:05.615 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-11 16:01:05.625 [Task submitter] INFO  nextflow.Session - [8a/8ce272] Submitted process > build_report (1)
+Feb-11 16:01:30.458 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: build_report (1); status: COMPLETED; exit: 0; error: -; workDir: /home/ubuntu/data/results/work/8a/8ce2723897786f88c34fc2be791ae5]
+Feb-11 16:01:30.466 [main] DEBUG nextflow.Session - Session await > all process finished
+Feb-11 16:01:30.473 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Feb-11 16:01:30.483 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=2; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=28.9s; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=1; peakCpus=1; peakMemory=8 GB; ]
+Feb-11 16:01:30.483 [main] DEBUG nextflow.trace.TraceFileObserver - Flow completing -- flushing trace file
+Feb-11 16:01:30.486 [main] DEBUG nextflow.trace.ReportObserver - Flow completing -- rendering html report
+Feb-11 16:01:30.521 [main] DEBUG nextflow.trace.ReportObserver - Execution report summary data:
+  [{"cpuUsage":{"mean":129.3,"min":129.3,"q1":129.3,"q2":129.3,"q3":129.3,"max":129.3,"minLabel":"run_indexcov","maxLabel":"run_indexcov","q1Label":"run_indexcov","q2Label":"run_indexcov","q3Label":"run_indexcov"},"process":"run_indexcov","mem":{"mean":1971453952,"min":1971453952,"q1":1971453952,"q2":1971453952,"q3":1971453952,"max":1971453952,"minLabel":"run_indexcov","maxLabel":"run_indexcov","q1Label":"run_indexcov","q2Label":"run_indexcov","q3Label":"run_indexcov"},"memUsage":{"mean":22.95,"min":22.95,"q1":22.95,"q2":22.95,"q3":22.95,"max":22.95,"minLabel":"run_indexcov","maxLabel":"run_indexcov","q1Label":"run_indexcov","q2Label":"run_indexcov","q3Label":"run_indexcov"},"timeUsage":null,"vmem":{"mean":2153787392,"min":2153787392,"q1":2153787392,"q2":2153787392,"q3":2153787392,"max":2153787392,"minLabel":"run_indexcov","maxLabel":"run_indexcov","q1Label":"run_indexcov","q2Label":"run_indexcov","q3Label":"run_indexcov"},"reads":{"mean":9086553,"min":9086553,"q1":9086553,"q2":9086553,"q3":9086553,"max":9086553,"minLabel":"run_indexcov","maxLabel":"run_indexcov","q1Label":"run_indexcov","q2Label":"run_indexcov","q3Label":"run_indexcov"},"cpu":{"mean":129.3,"min":129.3,"q1":129.3,"q2":129.3,"q3":129.3,"max":129.3,"minLabel":"run_indexcov","maxLabel":"run_indexcov","q1Label":"run_indexcov","q2Label":"run_indexcov","q3Label":"run_indexcov"},"time":{"mean":4967,"min":4967,"q1":4967,"q2":4967,"q3":4967,"max":4967,"minLabel":"run_indexcov","maxLabel":"run_indexcov","q1Label":"run_indexcov","q2Label":"run_indexcov","q3Label":"run_indexcov"},"writes":{"mean":27338514,"min":27338514,"q1":27338514,"q2":27338514,"q3":27338514,"max":27338514,"minLabel":"run_indexcov","maxLabel":"run_indexcov","q1Label":"run_indexcov","q2Label":"run_indexcov","q3Label":"run_indexcov"}},{"cpuUsage":{"mean":99.6,"min":99.6,"q1":99.6,"q2":99.6,"q3":99.6,"max":99.6,"minLabel":"build_report (1)","maxLabel":"build_report (1)","q1Label":"build_report (1)","q2Label":"build_report (1)","q3Label":"build_report (1)"},"process":"build_report","mem":{"mean":81289216,"min":81289216,"q1":81289216,"q2":81289216,"q3":81289216,"max":81289216,"minLabel":"build_report (1)","maxLabel":"build_report (1)","q1Label":"build_report (1)","q2Label":"build_report (1)","q3Label":"build_report (1)"},"memUsage":null,"timeUsage":null,"vmem":{"mean":280879104,"min":280879104,"q1":280879104,"q2":280879104,"q3":280879104,"max":280879104,"minLabel":"build_report (1)","maxLabel":"build_report (1)","q1Label":"build_report (1)","q2Label":"build_report (1)","q3Label":"build_report (1)"},"reads":{"mean":11956055,"min":11956055,"q1":11956055,"q2":11956055,"q3":11956055,"max":11956055,"minLabel":"build_report (1)","maxLabel":"build_report (1)","q1Label":"build_report (1)","q2Label":"build_report (1)","q3Label":"build_report (1)"},"cpu":{"mean":99.6,"min":99.6,"q1":99.6,"q2":99.6,"q3":99.6,"max":99.6,"minLabel":"build_report (1)","maxLabel":"build_report (1)","q1Label":"build_report (1)","q2Label":"build_report (1)","q3Label":"build_report (1)"},"time":{"mean":23982,"min":23982,"q1":23982,"q2":23982,"q3":23982,"max":23982,"minLabel":"build_report (1)","maxLabel":"build_report (1)","q1Label":"build_report (1)","q2Label":"build_report (1)","q3Label":"build_report (1)"},"writes":{"mean":3580850,"min":3580850,"q1":3580850,"q2":3580850,"q3":3580850,"max":3580850,"minLabel":"build_report (1)","maxLabel":"build_report (1)","q1Label":"build_report (1)","q2Label":"build_report (1)","q3Label":"build_report (1)"}}]
+Feb-11 16:01:31.178 [main] DEBUG nextflow.trace.TimelineObserver - Flow completing -- rendering html timeline
+Feb-11 16:01:31.292 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+Feb-11 16:01:31.318 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

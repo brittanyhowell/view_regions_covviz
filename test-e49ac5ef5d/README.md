@@ -65,7 +65,7 @@ Seeing such a drop off in records per chrom is concerning - I opened a few of th
 
 The ped files in Test1 showed some curious values for CNchrX among others. So I picked two samples showing more normal values in the ped file as well as sensible values in the bed file (EGAN00001214535 & EGAN00001212262) and ran with those.
 
-Location: `test-e49ac5ef5d/15Genomes`
+Location: `test-e49ac5ef5d/2Genomes-2262-4535`
 
 Outcome: Build was successful, html was created with no errors. html loads, and shows two nicely coloured lines:
 ![2Genomes-cov-chr1](https://github.com/brittanyhowell/view_regions_covviz/blob/master/test-e49ac5ef5d/2Genomes-2262-4535/covviz-ss-2Genomes-chr1.png)
